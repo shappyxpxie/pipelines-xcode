@@ -10,7 +10,7 @@ steps:
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'test.p12'
-    certPwd: $(p12pwd)
+    certPwd: 12345678()
 
 - task: InstallAppleProvisioningProfile@1
   inputs:
