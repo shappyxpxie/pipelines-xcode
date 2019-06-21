@@ -7,6 +7,15 @@ pool:
   vmImage: 'macOS 10.13'
 
 steps:
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'test.p12'
+    certPwd: $(p12pwd)
+
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provProfileSecureFile: 'HSBCRBWM.mobileprovision'
+
 - task: Xcode@5
   inputs:
     scheme: ''
