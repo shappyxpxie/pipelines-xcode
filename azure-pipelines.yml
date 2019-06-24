@@ -7,7 +7,7 @@ pool:
   vmImage: 'macOS 10.13'
 
 variables:
-  scheme:'iOSHelloWorld'
+  scheme: 'iOSHelloWorld'
 
 steps:
 - task: InstallAppleCertificate@2
