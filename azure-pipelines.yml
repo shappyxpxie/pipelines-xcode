@@ -10,6 +10,7 @@ variables:
   scheme: 'iOSHelloWorld'
 
 steps:
+- script: xcodebuild -version
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'test.p12'
