@@ -6,6 +6,9 @@
 pool:
   vmImage: 'macOS 10.13'
 
+variables:
+  scheme:'iOSHelloWorld'
+
 steps:
 - task: InstallAppleCertificate@2
   inputs:
@@ -18,7 +21,7 @@ steps:
 
 - task: Xcode@5
   inputs:
-    scheme: ''
+    scheme: '$(scheme)'
     sdk: 'iphoneos'
     configuration: 'Release'
     xcodeVersion: 'default' # Options: 8, 9, default, specifyPath
